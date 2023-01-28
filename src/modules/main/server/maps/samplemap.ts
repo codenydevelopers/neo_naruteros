@@ -1,5 +1,5 @@
 import { RpgMap, MapData } from '@rpgjs/server'
-import { VillagerEvent } from '../events/villager'
+import { VillagerEvent } from '../../client/events/villager'
 
 @MapData({
     id: 'simplemap',

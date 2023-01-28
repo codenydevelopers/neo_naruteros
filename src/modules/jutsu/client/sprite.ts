@@ -17,7 +17,7 @@ export const sprite: RpgSpriteHooks = {
         textGraphic.anchor.set(0.5)
         sprite.textGraphic = textGraphic
         sprite.addChild(textGraphic) */
-        console.log(sprite)
+       
     },
     onChanges(sprite: RpgSprite, data: any) {
         /* if (data && data.name) {

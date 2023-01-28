@@ -1,20 +1,21 @@
-import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
+import { RpgEvent, EventData, RpgPlayer, EventMode  } from '@rpgjs/server'
 
 @EventData({
     name: 'EV-proyectil', 
+    mode : EventMode.Shared,
     hitbox: {
-        width: 32,
-        height: 16
-    }
+        width: 96,
+        height: 96
+    },
+    
 })
 export class proyectil extends RpgEvent {
     onInit() {
-        this.setGraphic('female132')
-    }
+        this.setGraphic("proyectil_animation")
+        //this.showAnimation('base', 'default')
+    } 
     async onAction(player: RpgPlayer) {
-        await player.showText('I give you 10 gold.', {
-            talkWith: this
-        })
-        player.gold += 10
+        
     }
+
 } 
